@@ -4,11 +4,12 @@
 		<meta name="viewport" content="width=device-width" charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Anton|Copse&display=swap" rel="stylesheet">
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+		 <link rel="icon" type="image/png" href="/styles/assets/expenses-favicon.png" sizes="512x512" />
 		<link type="text/css" rel="stylesheet" href="./styles/style.css">
-		<title>Budgety</title>
+		<title>Budget Tracker</title>
 	</head>
 	<body>
-	   
+	  
 		<div class="inc-exp-inputs">
 		  <div class="top">
 			  <div class="budget">
@@ -23,30 +24,30 @@
 				<div class="add">
 					<div class="add__container">
 					  <img src="./styles/assets/amount-white.svg" alt="" class="amount-img" />
-					  <img src="./styles/assets/inflow.svg" alt="" class="inflow-img" />
-						<img src="./styles/assets/expenses-white.svg" alt="" class="expense-img" id="expensesmg"/>
-					  <img src="./styles/assets/category-white.svg" alt="" class="category-img" />
+					  <img src="./styles/assets/inflow.svg" alt="icon of inflow" class="inflow-img" />
+						<img src="./styles/assets/expenses-white.svg" alt="icon of expenses" class="expense-img" id="expensesmg"/>
+					  <img src="./styles/assets/category-white.svg" alt="icon of category" class="category-img" />
 						<div class="input-fields">
 					  	<div class="description-value">
-					  		<input type="number" class="add__value" placeholder="Amount">
+					  		<input type="number" class="add__value" placeholder="Amount" id="add-input" required>
 							</div>
 							<select class="add__type">
 					  		<option value="exp" selected class="red-color">Expenses</option>
 								<option value="inc" class="green-color">Inflow</option>
 							</select>
 							<div class="description-value">
-								<input type="text" class="add__description" placeholder="Description">
+								<input type="text" class="add__description" placeholder="Description" id="add-input" required>
 							</div>
 						</div>
 					</div>
-					<input type="image" class="add__btn" src="./styles/assets/add2.svg"></input>
+					<input type="image" class="add__btn" id="add-btn"src="./styles/assets/add2.svg"></input>
 				</div>
 			</div>
 		</div>
 
-			<div class="container clearfix">
+			<div class="container">
 				<div class="budget__title">
-					Budget Balance in <span class="budget__title--month">%Month%</span>:
+					<h1>Budget Balance in <span class="budget__title--month">%Month%</span>:</h1>
 				</div>
 				
 				<div class="budget__value"></div>
@@ -68,8 +69,6 @@
 					</div>			
 				</div>
 			
- 
-		
 		<script src="app.js"></script>
 	</body>
 </html>

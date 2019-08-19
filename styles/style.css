@@ -1,5 +1,13 @@
-/**********************************************
-*** GENERAL **********************************************/
+/* SET UP */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+ /* GENERAL  */
 
 * {
 	margin: 0;
@@ -15,7 +23,7 @@
 
 body {
 	color: #555;
-	font-size: 16px;
+	font-size: 1.1rem;;
 	position: relative;
 	height: 100vh;
 	font-weight: 400;
@@ -23,11 +31,9 @@ body {
 	flex-direction: row;
 }
 
-
 .right { 
 	float: right; 
 }
-
 
 .red-focus:focus { 
 	border: 1.5px solid #FF5049 !important; 
@@ -37,14 +43,11 @@ body {
 	width: 40%;
 	position: relative;
 	display: inline-block;
-	background:black;
+	background:#000000;
 }
 
 
-/**********************************************
-*** TOP PART
-**********************************************/
-
+/* TOP PART */
 
 .top {
 	height: 40vh;
@@ -57,11 +60,11 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: #fff;
+	color: #ffffff;
 }
 
 .budget-header {
-	color: black;
+	color: #000000;
   margin: 0 auto;
 }
 
@@ -69,22 +72,21 @@ body {
 	font-family: 'Oxygen', sans-serif;
 	font-size: 3rem;
 	margin-bottom: 30px;
-	color: white;
-	/* letter-spacing: 3px; */
+	color: #ffffff;
 }
 
 .budget p {
-		font-family: 'Oxygen',
-		sans-serif;
-		color: white;
+	font-family: 'Oxygen',
+	sans-serif;
+	color: #ffffff;
 }
 
-
 .budget__title {
-		font-size: 18px;
-		font-family: 'Rubik Mono One', sans-serif;
-	text-align: center;
-	margin-bottom: 10px;
+		font-size: 1.5rem;
+		font-family: 'Oxygen', sans-serif;
+		font-weight: bold;
+		text-align: center;
+		margin: 66px auto 40px auto;
 		font-weight: 300;
 		color: black;
 }
@@ -93,25 +95,20 @@ body {
 	display: flex;
 	flex-direction: row;
 	margin-top: 50px;
-	/* justify-content: space-around;
-	align-items: center;
-	margin-top: 30px; */
 }
-
 
 .budget__value {
 	font-weight: 300;
 	font-family: 'Oxygen', sans-serif;
-	font-size: 46px;
+	font-size: 3rem;
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 	letter-spacing: 2px;
 	position: relative;
 }
 
 .totals {
 	display: flex;
-	/* justify-content: left; */
 	margin-top: 50px;
 }
 
@@ -120,61 +117,52 @@ body {
 	padding: 12px;
 	text-transform: uppercase;
 	width: 20%;
-		margin: 0 auto 10px auto;
-		
+	margin: 0 auto 10px auto;
 }
 
 .budget__income {
-		width: 200px;
-		height: 50px;
-		border-bottom: 1px solid green;
-		/* border-radius: 20px; */
+	width: 200px;
+	height: 50px;
+	border-bottom: 1px solid #008000;
 }
 
 .budget__expenses {
-		background-color: red;
-		width: 200px;
-		height: 50px;
-		border-radius: 20px;
+	background-color: red;
+	width: 200px;
+	height: 50px;
+	border-radius: 20px;
 }
 
 .budget__income--text,
 .budget__expenses--text {
-	font-family: 'Oxygen',
-			sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	float: left;
-	font-size: 20px;
-		margin-top: 2px;
+	font-size: 1.2rem;
+	margin-top: 2px;
 }
-
 
 .budget__income--value,
 .budget__expenses--value {
-	  font-size: 20px;
+	font-size: 1.2rem;
 	letter-spacing: 1px;
-		float: right;
-		font-family: 'Oxygen', sans-serif
-		sans-serif;
-
+	float: right;
+	font-family: 'Oxygen', sans-serif;
 }
 
 
+/* BOTTOM PART */
+/* Form */
 
-/**********************************************
-*** BOTTOM PART
-**********************************************/
-
-/***** FORM *****/
 .add {
 	padding: 14px;
 	display: flex;
-		flex-direction: column;
+	flex-direction: column;
 }
 
 .add__container {
 	margin: 0 auto;
 	text-align: center;
-		position: relative;
+	position: relative;
 }
 
 .amount-img {
@@ -218,9 +206,9 @@ body {
 	width: 400px;
 	border: 1px solid #e7e7e7;
 	height: 44px;
-	font-size: 18px;
+	font-size: 1.1rem;
 	color: inherit;
-	background-color: #fff;
+	background-color: #ffffff;
 	margin: 0 10px 10px 0;
 	font-weight: 300;
 	transition: border 0.3s;
@@ -233,10 +221,10 @@ body {
 .add__description { 
 	width: 400px;
 	border: 1px solid #e7e7e7;
-  background-color: #fff;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
   font-family: 'Oxygen', sans-serif;
-  font-size: 14px;
+  font-size: 0.9rem;
   padding: 12px 15px;
   margin-right: 10px;
   border-radius: 5px;
@@ -246,11 +234,11 @@ body {
 .add__value { 
 	width: 400px;
 	border: 1px solid #e7e7e7;
-  background-color: #fff;
-  color: black;
-    font-family: 'Oxygen',
-    sans-serif;
-  font-size: 14px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Oxygen',
+  sans-serif;
+  font-size: 0.9rem;
 	padding: 12px 15px;
  	margin: 0 9px 10px 0;
   border-radius: 5px;
@@ -258,15 +246,15 @@ body {
 }
 
 .add__btn {
-		width: 100px;
-		margin: 100px auto;
+	width: 100px;
+	margin: 100px auto;
 	background: none;
 	border: none;
 	cursor: pointer;
 	display: inline-block;
 	vertical-align: middle;
-		line-height: 1.1;
-		color: black;
+	line-height: 1.1;
+	color: #000000;
 }
 
 .add__btn:active { transform: translateY(2px); }
@@ -280,7 +268,8 @@ body {
 
 .add__btn:focus { outline: none; }
 
-/***** LISTS *****/
+
+/* LISTS  */
 
 .total-title {
 	position: relative;
@@ -294,8 +283,16 @@ body {
 }
 
 .container {
-	width: 50%;
-	margin: 60px auto;
+	width: 60%;
+	background-color: #ffffff;
+	background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 1.2em;
+	z-index: 100;
+	position: relative;
+}
+
+.balance-container {
+	margin-left: 50px;
 }
 
 .income {
@@ -310,31 +307,34 @@ body {
 	margin: 50px 0 0 50px;
 }
 
-
 h2 {
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 1.1rem;
 	font-weight: 400; 
 	margin-bottom: 15px;
 }
 
 .income__title { 
-		color: green;
-		font-family: 'Oxygen',
-		sans-serif;
-		border-bottom: 2px dashed green;
+	color: #008000;
+	font-size: 1.1rem;
+	width: 80%;
+	font-family: 'Oxygen',
+	sans-serif;
+	border-bottom: 2px solid #008000;
 }
 .expenses__title { 
 	color: #FF5049; 
+	font-size: 1.1rem;
+	width: 80%;
 	font-family: 'Oxygen', sans-serif;
-	border-bottom: 2px dashed red;
+	border-bottom: 2px solid #FF5049;
 }
 
 .item {
 	padding: 13px;
 	border-bottom: 1px solid #e7e7e7;
-	  font-family: 'Oxygen',
-	  sans-serif;
+	font-family: 'Oxygen', sans-serif;
+	width: 80%;
 }
 
 .item:first-child { border-top: 1px solid #e7e7e7; }
@@ -351,7 +351,7 @@ h2 {
 
 .income .item__value,
 .income .item__delete--btn {
-	color: #28B9B5;
+	color: #008000;
 }
 
 .expenses .item__value,
@@ -359,13 +359,12 @@ h2 {
 	color: #FF5049;
 }
 
-
 .item__delete {
 	float: left;
 }
 
 .item__delete--btn {
-	font-size: 22px;
+	font-size: 1.3rem;
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -381,39 +380,44 @@ h2 {
 .item:hover .item__delete--btn { display: block; }
 .item:hover .item__value { transform: translateX(-20px); }
 
-
 .unpaid {
 	background-color: #FFDAD9 !important;
 	cursor: pointer;
 	color: #FF5049;
-
 }
 
 .unpaid:hover .item__description { font-weight: 900; }
+
+
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1208px) {
 
-	/* User Inputs */
 body {
 	width: 100%;
 	color: #555;
-	font-size: 16px;
+	font-size: 1.2rem;
 	height: 50vh;
 	display: block;
 	font-weight: 400;
 }
 
 .inc-exp-inputs {
+	display: block;
 	width: 100%;
-	background: black;
+	height: 90vh;
+	background:#000000;
 }
 
 .amount-img {
 	width: 60px;
 	left: -70px;
 
+}
+
+.add__btn {
+	margin-top: 55px;
 }
 
 .add__type {
@@ -428,20 +432,31 @@ body {
 	width: 300px;
 }
 
+.budget__title h1 {
+	font-size: 2rem;
+	
+}
+
 .balance-container {
-	width: 100%;
-	display: block;
+	width: 70%;
+	margin: 67px auto 0 150px;
 }
 
 .income {
-	width: 250px;
+	width: 400px;
 	margin: auto;
 }
 
 .expenses {
-	width: 250px;
+	width: 400px;
 	margin: auto;
 }
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
 }
 
 
@@ -450,7 +465,7 @@ body {
 body {
 	width: 100%;
 	color: #555;
-	font-size: 16px;
+	font-size: 1rem;
 	height: 50vh;
 	display: block;
 	font-weight: 400;
@@ -458,13 +473,17 @@ body {
 
 .inc-exp-inputs {
 	width: 100%;
-	background: black;
+	background: #000000;
 }
 
 .amount-img {
 	width: 60px;
 	left: -70px;
 
+}
+
+.add__btn {
+	margin-top: 55px;
 }
 
 .add__type {
@@ -479,9 +498,19 @@ body {
 	width: 300px;
 }
 
+.budget__title h1 {
+	width: 80%;
+	font-size: 1.8rem;
+	margin-left: 60px;
+}
+
 .balance-container {
-	width: 100%;
-	display: block;
+	width: 80%;
+	margin: 60px auto 0 90px;
+}
+
+.budget__value {
+	font-size: 2.5rem;
 }
 
 .income {
@@ -497,12 +526,11 @@ body {
 
 
 @media only screen and (max-width: 480px) {
-	/* User Inputs */
 
 	body {
 		width: 100%;
 		color: #555;
-		font-size: 16px;
+		font-size: 1rem;
 		height: 50vh;
 		display: block;
 		font-weight: 400;
@@ -510,30 +538,66 @@ body {
 
 	.inc-exp-inputs {
 		width: 100%;
-		background: black;
+		background: #000000;
+		height: 90vh;
 	}
 
-	.amount-img {
-		width: 60px;
-		left: -70px;
+	.budget {
+		width: 90%;
+	}
 
+	.budget-header {
+		width: 60%;
+		margin-top: -20px;
+	}
+
+	.budget-header h1 {
+		font-size: 1.5rem;
+	}
+
+	.amount-img,
+	.inflow-img,
+	.expense-img,
+	.category-img {
+		display: none;
+	}
+
+	.input-fields {
+		margin-top: -30px;
 	}
 
 	.add__type {
-		width: 300px;
+		width: 200px;
 	}
 
 	.add__description {
-		width: 300px;
+		width: 200px;
 	}
 
 	.add__value {
-		width: 300px;
+		width: 200px;
+	}
+
+	.add__btn {
+		width: 30%;
+		margin: 45px auto 0 auto;
+	}
+
+	.budget__title h1 {
+		font-size: 1.3rem;
+		width: 100%;
+		margin: 0 auto;
+
+	}
+
+	.budget__value {
+		font-size: 2rem;
 	}
 
 	.balance-container {
-		width: 100%;
+		width: 80%;
 		display: block;
+		margin-left: 60px;
 	}
 
 	.income {
@@ -545,7 +609,9 @@ body {
 		width: 250px;
 		margin: auto;
 	}
-	/* Displays */
 
-
+	.container {
+		width: 100%;
+		margin: 0 auto;
+	}
 }
