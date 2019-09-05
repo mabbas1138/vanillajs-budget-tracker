@@ -1,6 +1,7 @@
 
-// BUDGET CONTROLLER //
+////// BUDGET CONTROLLER //////
 // IIFE 
+
 const budgetController = (function () {
 
   const Expense = function (id, description, value) {
@@ -8,19 +9,6 @@ const budgetController = (function () {
       this.description = description,
       this.value = value
   };
-
-  // Expense.prototype.calcPercentage = function (totalIncome) {
-  //   if (totalIncome > 0) {
-  //     this.percentage = Math.round((this.value / totalIncome) * 100);
-  //   } else {
-  //     this.percentage = -1;
-  //   }
-  // };
-
-
-  // Expense.prototype.getPercentage = function () {
-  //   return this.percentage;
-  // };
 
   const Income = function (id, description, value) {
     this.id = id,
@@ -46,7 +34,6 @@ const budgetController = (function () {
       inc: 0
     },
     budget: 0
-    // percentage: -1
   }
 
 
@@ -102,27 +89,7 @@ const budgetController = (function () {
 
       data.budget = data.totals.inc - data.totals.exp;
 
-      // Calculate the percentage of income that we spent
-      // if (data.totals.inc > 0) {
-      //   data.percetange = Math.round((data.totals.exp / data.totals.inc) * 100)
-      // } else {
-      //   data.percentage = -1;
-      // }
     },
-
-    // calculatePercentages: function () {
-
-    //   data.allItems.exp.forEach(function (cur) {
-    //     cur.calcPercentage(data.totals.inc);
-    //   });
-    // },
-
-    // getPercentages: function () {
-    //   var allPerc = data.allItems.exp.map(function (cur) {
-    //     return cur.getPercentage();
-    //   });
-    //   return allPerc;
-    // },
 
     getBudget: function () {
       return {
@@ -141,10 +108,7 @@ const budgetController = (function () {
 })(); // it is immediately invoked using that callback immediately following the function.
 
 
-///////////
-
-
-// UI CONTROLLER //
+////// UI CONTROLLER //////
 const UIController = (function () {
 
   const DOMstrings = {
@@ -157,9 +121,7 @@ const UIController = (function () {
     budgetLabel: '.budget__value',
     incomeLabel: '.budget__income--value',
     expensesLabel: '.budget__expenses--value',
-    // percentageLabel: '.budget__expenses--percentage',
     container: '.container',
-    // expensesPercLabel: '.item__percentage',
     dateLabel: '.budget__title--month'
   };
 
@@ -219,7 +181,6 @@ const UIController = (function () {
       newHtml = newHtml.replace('%description%', obj.description);
       newHtml = newHtml.replace('%value%', formatNumber(obj.value, type));
 
-
       // Insert the HTML into the DOM
 
       document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
@@ -262,28 +223,7 @@ const UIController = (function () {
       } else if (obj.budget < 0) {
         document.querySelector(DOMstrings.budgetLabel).style.color = 'red'
       }
-      // if (obj.percentage > 0) {
-      //   document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
-
-      // } else {
-      //   document.querySelector(DOMstrings.percentageLabel).textContent = '---';
-      // }
     },
-
-    // displayPercentages: function (percentages) {
-
-    //   const fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
-
-    //   nodeListForEach(fields, function (current, index) {
-
-    //     if (percentages[index] > 0) {
-    //       current.textContent = percentages[index] + '%';
-    //     } else {
-    //       current.textContent = '---';
-    //     }
-    //   });
-
-    // },
 
     displayMonth: function () {
       const now = new Date();
@@ -331,11 +271,7 @@ const UIController = (function () {
 
 })();
 
-
-///////////
-
-
-// GLOBAL APP CONTROLLER //
+////// GLOBAL APP CONTROLLER //////
 
 // we name it budgtCtrl UICtrl allows us to keep the originally named controllers independent. Less rewriting if we wanted to rename them.
 const appController = (function (budgetCtrl, UICtrl) {
@@ -357,7 +293,6 @@ const appController = (function (budgetCtrl, UICtrl) {
 
     // 'Change event' toggles whenever there's a change to the dropdown menu
     document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
-
   }
 
 
